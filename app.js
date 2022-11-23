@@ -1,18 +1,20 @@
 // question 1 show rating
 
 function showRating(rating) {
-    let ratings = ""
-   for (let i = 0; i < Math.floor(rating); i++) {
-        ratings += "*"
-    if (i !== Math.floor(rating) - 1) {
-        ratings += " "
+    let string = ""
+
+    for (let i = 0; i < Math.floor(rating); i++) {
+        string += "*"
+        if (i !== Math.floor(rating) - 1) {
+            string += " "
+        }
     }
-   }
-   if (!Number.isInteger(rating)) {
-    ratings += ' .'
-   }
-   return ratings
+
+    if (!Number.isInteger(rating)) {
+        string += " ."
+    }
+
+    return string
 }
 
-console.log(showRating(5))
-
+console.log(showRating(3))
