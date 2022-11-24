@@ -1,9 +1,13 @@
 // question 2 sort by lowest to highest price
 
-function sortLowToHigh(arr) {
-    return arr.sort((a, b) => a - b)
+function sortHighToLow(arr) {
+    return arr.sort((a, b) => b.price - a.price)
 }
 
-let array = [5, 10, 0, -5]
+console.log(sortHighToLow([
+    { id: 1, price: 50},
+    { id: 2, price: 0},
+    { id: 3, price: 500}
+])
+)
 
-console.log(sortLowToHigh(array))
