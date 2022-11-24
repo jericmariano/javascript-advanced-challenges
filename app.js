@@ -1,13 +1,13 @@
-// question 3 sort by highest to lowest price
+// question 5 find all the posts by a single user (promises)
 
-function sortHighToLow(arr) {
-    return arr.sort((a, b) => b.price - a.price)
+async function postsByUser(userId) {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/posts")
+    const result = await promise.json()
+
+     const posts = result.filter(elem => elem.userId === userId)
+
+     console.log(posts)
 }
 
-console.log(sortHighToLow([
-    { id: 1, price: 50},
-    { id: 2, price: 0},
-    { id: 3, price: 500}
-])
-)
 
+postsByUser(4)
