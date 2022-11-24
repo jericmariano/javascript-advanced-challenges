@@ -1,20 +1,9 @@
-// question 1 show rating
+// question 2 sort by lowest to highest price
 
-function showRating(rating) {
-    let string = ""
-
-    for (let i = 0; i < Math.floor(rating); i++) {
-        string += "*"
-        if (i !== Math.floor(rating) - 1) {
-            string += " "
-        }
-    }
-
-    if (!Number.isInteger(rating)) {
-        string += " ."
-    }
-
-    return string
+function sortLowToHigh(arr) {
+    return arr.sort((a, b) => a - b)
 }
 
-console.log(showRating(3))
+let array = [5, 10, 0, -5]
+
+console.log(sortLowToHigh(array))
