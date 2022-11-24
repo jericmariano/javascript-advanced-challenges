@@ -1,4 +1,4 @@
-// question 2 sort by lowest to highest price
+// question 3 sort by highest to lowest price
 
 function sortHighToLow(arr) {
     return arr.sort((a, b) => b.price - a.price)
