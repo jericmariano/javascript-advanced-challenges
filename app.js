@@ -1,13 +1,13 @@
-// question 5 find all the posts by a single user (promises)
+// question 6 firsrt 6 incomplete todos
 
-async function postsByUser(userId) {
-    const promise = await fetch("https://jsonplaceholder.typicode.com/posts")
+async function firstSixIncomplete() {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/todos")
     const result = await promise.json()
 
-     const posts = result.filter(elem => elem.userId === userId)
+     const incomplete = result.filter(elem => !elem.completed).slice(0, 6)
 
-     console.log(posts)
+     console.log(incomplete)
 }
 
 
-postsByUser(4)
+firstSixIncomplete()
